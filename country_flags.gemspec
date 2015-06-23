@@ -1,3 +1,6 @@
+$:.push File.expand_path('../lib', __FILE__)
+require 'country_flags/version'
+
 Gem::Specification.new do |s|
   s.name = 'country_flags'
   s.version = CountryFlags::VERSION
