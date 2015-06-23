@@ -18,4 +18,5 @@ Gem::Specification.new do |s|
   s.license = 'MIT'
 
   s.add_development_dependency('rspec', '>= 2.11')
+  s.add_dependency "railties", ">= 3.1"
 end
