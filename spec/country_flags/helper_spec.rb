@@ -17,4 +17,14 @@ describe CountryFlags::Helper do
       expect(country_flag_path('bg', :png)).to be_a(String)
     end
   end
+
+  describe '#country_flag' do
+    it 'returns image tag' do
+      expect(country_flag('bg')).to be_a(String)
+    end
+
+    it 'throws exception if wrong format given' do
+      expect { country_flag('bg', format: :tiff) }.to raise_error(ArgumentError)
+    end
+  end
 end

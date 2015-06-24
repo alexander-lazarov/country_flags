@@ -4,6 +4,7 @@ module CountryFlags
   module Helper
 
     include ActionView::Helpers::AssetUrlHelper
+    include ActionView::Helpers::AssetTagHelper
 
     # returns path to flag image
     # use ISO-3166 Alpha 2 country codes
@@ -15,6 +16,13 @@ module CountryFlags
 
       path = "country_flags/#{format}/#{country_code.downcase}.#{format}"
       image_path path
+    end
+
+
+    def country_flag( country_code, options = {} )
+      options = {format: :png}.merge(options)
+
+      image_tag country_flag_path(country_code, options[:format])
     end
   end
 end

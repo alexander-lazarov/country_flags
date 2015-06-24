@@ -21,6 +21,9 @@ In views:
 ```ruby
 
 # using helper
+country_flag 'bg'
+country_flag 'bg', format: 'gif'
+
 image_tag country_flag_path 'bg'
 image_tag country_flag_path 'bg', :gif
 
