@@ -1,6 +1,9 @@
+require 'rails'
+
 module CountryFlags
-  module Rails
-    class Railtie < ::Rails::Railtie
+  class Railtie < ::Rails::Railtie
+    initializer 'country_flags.view_helpers' do
+      ActionView::Base.send :include, Helper
     end
   end
 end
