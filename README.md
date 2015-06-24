@@ -19,6 +19,11 @@ bundle install
 
 In views:
 ```ruby
+
+# using helper
+image_tag country_flag_path 'bg'
+image_tag country_flag_path 'bg', :gif
+
 # gif version
 image_tag 'country_flags/gif/bg.gif'
 
