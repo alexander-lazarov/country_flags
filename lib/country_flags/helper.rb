@@ -22,7 +22,10 @@ module CountryFlags
     def country_flag( country_code, options = {} )
       options = {format: :png}.merge(options)
 
-      image_tag country_flag_path(country_code, options[:format])
+      country_name = NormalizeCountry( country_code, to: :short )
+
+      image_tag country_flag_path(country_code, options[:format]),
+        alt: country_name, title: country_name
     end
   end
 end
