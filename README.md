@@ -1,9 +1,9 @@
 # Readme
 
+[![Gem Version](https://badge.fury.io/rb/country_flags.svg)](http://badge.fury.io/rb/country_flags)
+
 Gemified collection of
 [country flags](http://www.famfamfam.com/lab/icons/flags/).
-
-[![Gem Version](https://badge.fury.io/rb/country_flags.svg)](http://badge.fury.io/rb/country_flags)
 
 ## Usage
 
