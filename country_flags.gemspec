@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.name = 'country_flags'
   s.version = CountryFlags::VERSION
   s.authors = ['Alexander Lazarov']
-  s.description = 'Gemified collection of country flags. See homepage for details: https://github.com/alexander-lazarov/isaf_id_validator'
+  s.description = 'Gemified collection of country flags. See homepage for details: https://github.com/alexander-lazarov/country_flags'
   s.email = 'alexander.lazaroff@gmail.com'
   s.extra_rdoc_files = [ 'LICENSE' ]
   s.files = `git ls-files`.split("\n")
