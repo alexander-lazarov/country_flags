@@ -36,3 +36,6 @@ Gemfile.lock
 
 # Sublime Text workspace
 project.sublime-workspace
+
+# vi(m) swap files
+*.sw?
