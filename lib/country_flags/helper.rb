@@ -1,5 +1,7 @@
 require 'action_view'
 
+require 'normalize_country'
+
 module CountryFlags
   module Helper
 
@@ -14,6 +16,8 @@ module CountryFlags
         raise(ArgumentError, 'format must be :png or :gif')
       end
 
+      return '' unless country_code && !country_code.empty?
+
       path = "country_flags/#{format}/#{country_code.downcase}.#{format}"
       image_path path
     end
@@ -23,6 +27,8 @@ module CountryFlags
       options = {format: :png}.merge(options)
 
       country_name = NormalizeCountry( country_code, to: :short )
+
+      return '' unless country_name
 
       image_tag country_flag_path(country_code, options[:format]),
         alt: country_name, title: country_name

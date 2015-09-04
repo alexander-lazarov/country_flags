@@ -16,6 +16,11 @@ describe CountryFlags::Helper do
     it 'returns image path' do
       expect(country_flag_path('bg', :png)).to be_a(String)
     end
+
+    it 'returns empty string if no country path given' do
+      expect(country_flag_path(nil)).to eq('') 
+      expect(country_flag_path('')).to eq('') 
+    end
   end
 
   describe '#country_flag' do
@@ -25,6 +30,11 @@ describe CountryFlags::Helper do
 
     it 'throws exception if wrong format given' do
       expect { country_flag('bg', format: :tiff) }.to raise_error(ArgumentError)
+    end
+
+    it 'returns empty string if no coutry given' do
+      expect(country_flag(nil)).to eq('') 
+      expect(country_flag('')).to eq('') 
     end
   end
 end
